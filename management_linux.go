@@ -16,7 +16,10 @@ import (
 )
 
 func (m *Management) Start() (path string, err error) { // {{{
-	m.Path = "/tmp/openvpn-management-" + strconv.Itoa(os.Getpid()) + ".sock"
+	m.Conn.config.Protocol()
+	s1 := rand.NewSource(time.Now().UnixNano())
+	r1 := rand.New(s1)
+	m.Path = "/tmp/openvpn-management-" + strconv.Itoa(os.Getpid()) + "-" + strconv.Itoa(r1.Intn(1000000)) + ".sock"
 
 	log.Info("Management start: unix:" + m.Path)
 
