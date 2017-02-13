@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/gob"
+	"math/rand"
 	"net"
 	"net/textproto"
 	"os"
