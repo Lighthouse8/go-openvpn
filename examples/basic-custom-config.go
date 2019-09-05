@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/stamp/go-openvpn"
+	"github.com/lighthouse8/go-openvpn"
 )
 
 func main() {

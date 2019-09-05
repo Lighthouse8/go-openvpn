@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/cihub/seelog"
+	"github.com/lighthouse8/go-openvpn/log"
 )
 
 func (m *Management) Start() (path string, err error) { // {{{
@@ -400,7 +400,7 @@ func (m *Management) clientList(match []string) { // {{{
 	//192.168.11.4,VPN_client,10.13.156.4:1194,Thu Feb 13 23:39:20 2014
 
 	//Max bcast/mcast queue length,0
-}                                                          // }}}
+} // }}}
 func makeCsvList(data string) (list []map[string]string) { // {{{
 	list = make([]map[string]string, 0)
 

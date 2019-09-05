@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"sync"
 
-	log "github.com/cihub/seelog"
+	"github.com/lighthouse8/go-openvpn/log"
 	"github.com/stamp/go-openssl"
 )
 
@@ -27,6 +27,7 @@ type Process struct {
 }
 
 func NewProcess() *Process {
+
 	p := &Process{
 		Env:     make(map[string]string, 0),
 		Events:  make(chan *Event, 10),
@@ -64,7 +65,7 @@ func NewSslServer(ca *openssl.CA, cert *openssl.Cert, dh *openssl.DH, ta *openss
 
 	p.SetConfig(c)
 	return p
-}                                                                                                                                  // }}}
+} // }}}
 func NewSslClient(remote string, ca *openssl.CA, cert *openssl.Cert, dh *openssl.DH, ta *openssl.TA, configFile string) *Process { // {{{
 	p := NewProcess()
 	c := NewConfig()
@@ -89,7 +90,7 @@ func NewSslClient(remote string, ca *openssl.CA, cert *openssl.Cert, dh *openssl
 
 	p.SetConfig(c)
 	return p
-}                                                                 // }}}
+} // }}}
 func NewStaticKeyServer(key string, configFile string) *Process { // {{{
 	p := NewProcess()
 	c := NewConfig()
@@ -113,7 +114,7 @@ func NewStaticKeyServer(key string, configFile string) *Process { // {{{
 
 	p.SetConfig(c)
 	return p
-}                                                                         // }}}
+} // }}}
 func NewStaticKeyClient(remote, key string, configFile string) *Process { // {{{
 	p := NewProcess()
 	c := NewConfig()
@@ -165,19 +166,19 @@ func (p *Process) Start() (err error) { // {{{
 	p.config.setManagementPath(path)
 
 	return p.Restart()
-}                                      // }}}
+} // }}}
 func (p *Process) Stop() (err error) { // {{{
 	close(p.shutdown)
 	p.waitGroup.Wait()
 
 	return
-}                                          // }}}
+} // }}}
 func (p *Process) Shutdown() (err error) { // {{{
 	p.Stop()
 	p.management.Shutdown()
 
 	return
-}                                         // }}}
+} // }}}
 func (p *Process) Restart() (err error) { // {{{
 	// Fetch the current config
 	config, err := p.config.Validate()
@@ -248,7 +249,7 @@ func (p *Process) ProcessMonitor(cmd *exec.Cmd, release chan bool) { // {{{
 		}
 
 	}()
-}                                                // }}}
+} // }}}
 func (p *Process) stdoutMonitor(cmd *exec.Cmd) { // {{{
 	stdout, _ := cmd.StdoutPipe()
 	go func() {
@@ -269,7 +270,7 @@ func (p *Process) stdoutMonitor(cmd *exec.Cmd) { // {{{
 			return
 		}
 	}()
-}                                                // }}}
+} // }}}
 func (p *Process) stderrMonitor(cmd *exec.Cmd) { // {{{
 	stderr, _ := cmd.StderrPipe()
 	go func() {

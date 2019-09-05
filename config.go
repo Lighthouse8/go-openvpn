@@ -3,12 +3,13 @@ package openvpn
 import (
 	"encoding/json"
 	"errors"
-	log "github.com/cihub/seelog"
-	"github.com/stamp/go-openssl"
 	"net"
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/lighthouse8/go-openvpn/log"
+	"github.com/stamp/go-openssl"
 )
 
 type Config struct {

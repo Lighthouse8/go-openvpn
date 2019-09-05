@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
+	"github.com/lighthouse8/go-openvpn"
 	"github.com/stamp/go-openssl"
-	"github.com/stamp/go-openvpn"
 )
 
 func main() {

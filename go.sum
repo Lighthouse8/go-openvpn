@@ -1,0 +1,4 @@
+github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575 h1:kHaBemcxl8o/pQ5VM1c8PVE1PubbNx3mjUr09OqWGCs=
+github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575/go.mod h1:9d6lWj8KzO/fd/NrVaLscBKmPigpZpn5YawRPw+e3Yo=
+github.com/stamp/go-openssl v0.0.0-20151130221228-b5cda0941b72 h1:F7RnKpXabV0bGNpGWAPoNvsJ5YVmDbd6SwIOSkiXqok=
+github.com/stamp/go-openssl v0.0.0-20151130221228-b5cda0941b72/go.mod h1:gvdDT3dBz4lS3LSceTqu50Izk4eoHmhZ+4IGDMvVsLo=
