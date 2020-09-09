@@ -1,0 +1,21 @@
+# MANAGED BY LH8-SCRIPTS START
+.env
+.sql
+*.sql
+**/*.sql
+.pgsql
+*.pgsql
+**/*.pgsql
+.psql
+*.psql
+**/*.psql
+.sqlite
+*.sqlite
+**/*.sqlite
+!**/raw_sql/*.sql
+!**/raw_sql/*.psql
+!**/raw_sql/*.pgsql
+!**/raw_sql/*.sqlite
+.dockerignore
+.git
+# MANAGED BY LH8-SCRIPTS END
