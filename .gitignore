@@ -1,3 +1,23 @@
+# MANAGED BY LH8-SCRIPTS START
+.env
+.sql
+*.sql
+**/*.sql
+.pgsql
+*.pgsql
+**/*.pgsql
+.psql
+*.psql
+**/*.psql
+.sqlite
+*.sqlite
+**/*.sqlite
+!**/raw_sql/*.sql
+!**/raw_sql/*.psql
+!**/raw_sql/*.pgsql
+!**/raw_sql/*.sqlite
+# MANAGED BY LH8-SCRIPTS END
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
